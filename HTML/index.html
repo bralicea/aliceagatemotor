@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<title>Artiso - Bootstrap 4 premium SinglePage and MultePage HTML template</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image pulse"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form" action="/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="btn">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls p-normal">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div><!-- eof .modal -->
+
+	<div class="modal fade popupLogin" id="popupLogin" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content ds bs overflow-visible border-radius-3 box-shadow">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="color-main mb-3">Log in</h4>
+								<form class="form-registration c-mb-20 c-gutter-20" action="/">
+									<div class="row mb-4">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
+											</div>
+										</div>
+									</div>
+									<a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr" data-toggle="modal" href="#">Not a member? Register!</a>
+									<button type="submit" class="btn btn-maincolor mt-30 d-block">Sign In</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade popupRegistr" id="popupRegistr" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content ds bs overflow-visible border-radius-3 box-shadow">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="color-main mb-4">Registration</h4>
+								<form class="form-registration c-mb-20 c-gutter-20" method="post" action="/">
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="email" name="email" class="form-control" placeholder="email" required aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="password" name="confirmPassword" class="form-control" placeholder="password" required aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="checkbox" id="agreed" name="agreed" value="agreed" required aria-required="true"><label for="agreed">I agree to the rules</label>
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-maincolor mt-30 d-block">Registration</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+
+			<div class="header_absolute ds bs cover-background ">
+				<!-- header with three Bootstrap columns - left for logo, center for navigation and right for includes-->
+				<header class="page_header justify-nav-start ds bs s-overlay s-borderbottom">
+					<div class="container-fluid">
+						<div class="row align-items-center">
+							<div class="col-xl-2 col-sm-4 col-11">
+								<a href="./" class="logo">
+									<img class="logo-light" src="images/logo.png" alt="img">
+									<img class="logo-dark" src="images/logo-dark.png" alt="img">
+								</a>
+							</div>
+							<div class="col-xl-10 col-1">
+								<div class="nav-wrap">
+									<!-- main nav start -->
+									<nav class="top-nav">
+										<ul class="nav sf-menu">
+											<li class="active">
+												<a href="index.html">Home</a>
+												<ul>
+													<li>
+														<a href="index.html">MultiPage</a>
+													</li>
+													<li>
+														<a href="index_static.html">Static Intro</a>
+													</li>
+													<li>
+														<a href="index_singlepage.html">Single Page</a>
+													</li>
+													<li>
+														<a href="index_blocks.html">Blocks</a>
+													</li>
+												</ul>
+											</li>
+
+											<!-- blog -->
+											<li>
+												<a href="blog-right.html">Blog</a>
+												<ul>
+
+													<li>
+														<a href="blog-right.html">Right Sidebar</a>
+													</li>
+													<li>
+														<a href="blog-left.html">Left Sidebar</a>
+													</li>
+													<li>
+														<a href="blog-full.html">No Sidebar</a>
+													</li>
+													<li>
+														<a href="blog-grid.html">Blog Grid</a>
+													</li>
+
+													<li>
+														<a href="blog-single-right.html">Post</a>
+														<ul>
+															<li>
+																<a href="blog-single-right.html">Right Sidebar</a>
+															</li>
+															<li>
+																<a href="blog-single-left.html">Left Sidebar</a>
+															</li>
+															<li>
+																<a href="blog-single-full.html">No Sidebar</a>
+															</li>
+														</ul>
+													</li>
+
+													<li>
+														<a href="blog-single-video-right.html">Video Post</a>
+														<ul>
+															<li>
+																<a href="blog-single-video-right.html">Right Sidebar</a>
+															</li>
+															<li>
+																<a href="blog-single-video-left.html">Left Sidebar</a>
+															</li>
+															<li>
+																<a href="blog-single-video-full.html">No Sidebar</a>
+															</li>
+														</ul>
+													</li>
+
+												</ul>
+											</li>
+											<!-- eof blog -->
+
+											<li>
+												<a href="#">Features</a>
+												<div class="mega-menu">
+													<ul class="mega-menu-row">
+														<li class="mega-menu-col">
+															<a href="#">Headers</a>
+															<ul>
+																<li>
+																	<a href="header1.html">Header Type 1</a>
+																</li>
+																<li>
+																	<a href="header2.html">Header Type 2</a>
+																</li>
+																<li>
+																	<a href="header3.html">Header Type 3</a>
+																</li>
+																<li>
+																	<a href="header4.html">Header Type 4</a>
+																</li>
+																<li>
+																	<a href="header5.html">Header Type 5</a>
+																</li>
+																<li>
+																	<a href="header6.html">Header Type 6</a>
+																</li>
+															</ul>
+														</li>
+														<li class="mega-menu-col">
+															<a href="#">Side Menus</a>
+															<ul>
+																<li>
+																	<a href="header-side.html">Push Left</a>
+																</li>
+																<li>
+																	<a href="header-side-right.html">Push Right</a>
+																</li>
+																<li>
+																	<a href="header-side-slide.html">Slide Left</a>
+																</li>
+																<li>
+																	<a href="header-side-slide-right.html">Slide Right</a>
+																</li>
+																<li>
+																	<a href="header-side-sticked.html">Sticked Left</a>
+																</li>
+																<li>
+																	<a href="header-side-sticked-right.html">Sticked Right</a>
+																</li>
+															</ul>
+														</li>
+														<li class="mega-menu-col">
+															<a href="title1.html">Title Sections</a>
+															<ul>
+																<li>
+																	<a href="title1.html">Title section 1</a>
+																</li>
+																<li>
+																	<a href="title2.html">Title section 2</a>
+																</li>
+																<li>
+																	<a href="title3.html">Title section 3</a>
+																</li>
+																<li>
+																	<a href="title4.html">Title section 4</a>
+																</li>
+																<li>
+																	<a href="title5.html">Title section 5</a>
+																</li>
+																<li>
+																	<a href="title6.html">Title section 6</a>
+																</li>
+															</ul>
+														</li>
+														<li class="mega-menu-col">
+															<a href="footer1.html#footer">Footers</a>
+															<ul>
+																<li>
+																	<a href="footer1.html#footer">Footer Type 1</a>
+																</li>
+																<li>
+																	<a href="footer2.html#footer">Footer Type 2</a>
+																</li>
+																<li>
+																	<a href="footer3.html#footer">Footer Type 3</a>
+																</li>
+																<li>
+																	<a href="footer4.html#footer">Footer Type 4</a>
+																</li>
+																<li>
+																	<a href="footer5.html#footer">Footer Type 5</a>
+																</li>
+																<li>
+																	<a href="footer6.html#footer">Footer Type 6</a>
+																</li>
+															</ul>
+														</li>
+														<li class="mega-menu-col">
+															<a href="copyright1.html#copyright">Copyright</a>
+
+															<ul>
+																<li>
+																	<a href="copyright1.html#copyright">Copyright 1</a>
+																</li>
+																<li>
+																	<a href="copyright2.html#copyright">Copyright 2</a>
+																</li>
+																<li>
+																	<a href="copyright3.html#copyright">Copyright 3</a>
+																</li>
+																<li>
+																	<a href="copyright4.html#copyright">Copyright 4</a>
+																</li>
+																<li>
+																	<a href="copyright5.html#copyright">Copyright 5</a>
+																</li>
+																<li>
+																	<a href="copyright6.html#copyright">Copyright 6</a>
+																</li>
+															</ul>
+														</li>
+
+													</ul>
+												</div> <!-- eof mega menu -->
+											</li>
+											<!-- eof features -->
+
+
+											<li>
+												<a href="about.html">Pages</a>
+												<ul>
+
+
+													<li>
+														<a href="about.html">About</a>
+													</li>
+
+													<li>
+														<a href="careers.html">Careers</a>
+													</li>
+
+													<li>
+														<a href="services.html">Our Services</a>
+														<ul>
+															<li>
+																<a href="services.html">Services 1</a>
+															</li>
+															<li>
+																<a href="services2.html">Services 2</a>
+															</li>
+															<li>
+																<a href="services3.html">Services 3</a>
+															</li>
+															<li>
+																<a href="service-single.html">Single Service</a>
+															</li>
+														</ul>
+													</li>
+
+													<li>
+														<a href="pricing.html">Pricing</a>
+													</li>
+
+													<!-- shop -->
+													<li>
+														<a href="shop-right.html">Shop</a>
+														<ul>
+															<li>
+																<a href="shop-account-dashboard.html">Account</a>
+																<ul>
+
+																	<li>
+																		<a href="shop-account-details.html">Account details</a>
+																	</li>
+																	<li>
+																		<a href="shop-account-addresses.html">Addresses</a>
+																	</li>
+																	<li>
+																		<a href="shop-account-address-edit.html">Edit Address</a>
+																	</li>
+																	<li>
+																		<a href="shop-account-orders.html">Orders</a>
+																	</li>
+																	<li>
+																		<a href="shop-account-order-single.html">Single Order</a>
+																	</li>
+																	<li>
+																		<a href="shop-account-downloads.html">Downloads</a>
+																	</li>
+																	<li>
+																		<a href="shop-account-password-reset.html">Password Reset</a>
+																	</li>
+																	<li>
+																		<a href="shop-account-login.html">Login/Logout</a>
+																	</li>
+
+																</ul>
+															</li>
+															<li>
+																<a href="shop-right.html">Right Sidebar</a>
+															</li>
+															<li>
+																<a href="shop-left.html">Left Sidebar</a>
+															</li>
+															<li>
+																<a href="shop-product-right.html">Product Right Sidebar</a>
+															</li>
+															<li>
+																<a href="shop-product-left.html">Product Left Sidebar</a>
+															</li>
+															<li>
+																<a href="shop-cart.html">Cart</a>
+															</li>
+															<li>
+																<a href="shop-checkout.html">Checkout</a>
+															</li>
+															<li>
+																<a href="shop-order-received.html">Order Received</a>
+															</li>
+
+														</ul>
+													</li>
+													<!-- eof shop -->
+
+													<!-- features -->
+													<li>
+														<a href="shortcodes_iconbox.html">Shortcodes</a>
+														<ul>
+															<li>
+																<a href="shortcodes_typography.html">Typography</a>
+															</li>
+															<li>
+																<a href="shortcodes_buttons.html">Buttons</a>
+															</li>
+															<li>
+																<a href="shortcodes_pricing.html">Pricing</a>
+															</li>
+															<li>
+																<a href="shortcodes_iconbox.html">Icon Boxes</a>
+															</li>
+															<li>
+																<a href="shortcodes_progress.html">Progress</a>
+															</li>
+															<li>
+																<a href="shortcodes_tabs.html">Tabs &amp; Collapse</a>
+															</li>
+															<li>
+																<a href="shortcodes_bootstrap.html">Bootstrap Elements</a>
+															</li>
+															<li>
+																<a href="shortcodes_animation.html">Animation</a>
+															</li>
+															<li>
+																<a href="shortcodes_icons.html">Template Icons</a>
+															</li>
+															<li>
+																<a href="shortcodes_socialicons.html">Social Icons</a>
+															</li>
+														</ul>
+													</li>
+													<!-- eof shortcodes -->
+
+													<li>
+														<a href="shortcodes_widgets_default.html">Widgets</a>
+														<ul>
+															<li>
+																<a href="shortcodes_widgets_default.html">Default Widgets</a>
+															</li>
+															<li>
+																<a href="shortcodes_widgets_shop.html">Shop Widgets</a>
+															</li>
+															<li>
+																<a href="shortcodes_widgets_custom.html">Custom Widgets</a>
+															</li>
+														</ul>
+
+													</li>
+
+
+													<!-- events -->
+													<li>
+														<a href="events-left.html">Events</a>
+														<ul>
+															<li>
+																<a href="events-left.html">Left Sidebar</a>
+															</li>
+															<li>
+																<a href="events-right.html">Right Sidebar</a>
+															</li>
+															<li>
+																<a href="events-full.html">Full Width</a>
+															</li>
+															<li>
+																<a href="event-single-left.html">Single Event</a>
+																<ul>
+																	<li>
+																		<a href="event-single-left.html">Left Sidebar</a>
+																	</li>
+																	<li>
+																		<a href="event-single-right.html">Right Sidebar</a>
+																	</li>
+																	<li>
+																		<a href="event-single-full.html">Full Width</a>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+													<!-- eof events -->
+
+													<li>
+														<a href="team.html">Team</a>
+														<ul>
+															<li>
+																<a href="team.html">Team List</a>
+															</li>
+															<li>
+																<a href="team-single.html">Team Member</a>
+															</li>
+														</ul>
+													</li>
+
+
+													<li>
+														<a href="comingsoon.html">Comingsoon</a>
+													</li>
+
+													<li>
+														<a href="faq.html">FAQ</a>
+														<ul>
+															<li>
+																<a href="faq.html">FAQ</a>
+															</li>
+															<li>
+																<a href="faq2.html">FAQ 2</a>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<a href="404.html">404</a>
+													</li>
+
+												</ul>
+											</li>
+											<!-- eof pages -->
+
+											<!-- gallery -->
+											<li>
+												<a href="gallery-image.html">Gallery</a>
+												<ul>
+													<!-- Gallery image only -->
+													<li>
+														<a href="gallery-image.html">Image Only</a>
+														<ul>
+															<li>
+																<a href="gallery-image-2-cols.html">2 columns</a>
+															</li>
+															<li>
+																<a href="gallery-image.html">3 columns</a>
+															</li>
+															<li>
+																<a href="gallery-image-4-cols-fullwidth.html">4 columns fullwidth</a>
+															</li>
+
+														</ul>
+													</li>
+													<!-- eof Gallery image only -->
+
+													<!-- Gallery with title -->
+													<li>
+														<a href="gallery-title.html">Image With Title</a>
+														<ul>
+															<li>
+																<a href="gallery-title-2-cols.html">2 columns</a>
+															</li>
+															<li>
+																<a href="gallery-title.html">3 column</a>
+															</li>
+															<li>
+																<a href="gallery-title-4-cols-fullwidth.html">4 columns fullwidth</a>
+															</li>
+														</ul>
+													</li>
+													<!-- eof Gallery with title -->
+
+													<!-- Gallery with excerpt -->
+													<li>
+														<a href="gallery-excerpt.html">Image with Excerpt</a>
+														<ul>
+															<li>
+																<a href="gallery-excerpt-2-cols.html">2 columns</a>
+															</li>
+															<li>
+																<a href="gallery-excerpt.html">3 column</a>
+															</li>
+															<li>
+																<a href="gallery-excerpt-4-cols-fullwidth.html">4 columns fullwdith</a>
+															</li>
+														</ul>
+													</li>
+													<!-- eof Gallery with excerpt -->
+													<li>
+														<a href="gallery-tiled.html">Tiled Gallery</a>
+														<ul>
+															<li>
+																<a href="gallery-tiled-2-cols.html">2 columns</a>
+															</li>
+															<li>
+																<a href="gallery-tiled.html">3 columns fullwdith</a>
+															</li>
+														</ul>
+													</li>
+
+													<!-- Gallery item -->
+													<li>
+														<a href="gallery-single.html">Gallery Item</a>
+														<ul>
+															<li>
+																<a href="gallery-single.html">Style 1</a>
+															</li>
+															<li>
+																<a href="gallery-single2.html">Style 2</a>
+															</li>
+														</ul>
+													</li>
+													<!-- eof Gallery item -->
+												</ul>
+											</li>
+											<!-- eof Gallery -->
+
+											<!-- contacts -->
+											<li>
+												<a href="contact.html">Contact</a>
+												<ul>
+													<li>
+														<a href="contact.html">Contact 1</a>
+													</li>
+													<li>
+														<a href="contact2.html">Contact 2</a>
+													</li>
+													<li>
+														<a href="contact3.html">Contact 3</a>
+													</li>
+													<li>
+														<a href="contact4.html">Contact 4</a>
+													</li>
+												</ul>
+											</li>
+											<!-- eof contacts -->
+										</ul>
+
+
+									</nav>
+									<!-- eof main nav -->
+									<span class="justify-content-end ml-2 d-none d-xl-flex align-center">
+										<i class="fa fa-phone fs-20 mr-2 color-main2"></i> <a class="fs-20 color-font" href="tel:+1531287">+1 531 287 02 30</a>
+										<a href="contact.html" class="ml-4 btn btn-maincolor2 d-none d-lg-flex">Make An Appointment</a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- header toggler -->
+					<span class="toggle_menu"><span></span></span>
+				</header>
+
+			</div>
+
+			<section class="page_slider with-abs-header no-dots">
+				<div class="flexslider">
+					<ul class="slides m-h-900">
+						<li class="ds bs s-overlay cover-image text-center text-lg-left">
+							<img src="images/automatic_gate_50.webp" alt="img">
+							<div class="container">
+								<div class="row align-center">
+									<div class="col-12">
+										<div class="intro_layers">
+											<div class="intro_layer line-left color-main2" data-animation="fadeInRight">
+												<p>Fence & Gates Company</p>
+												<div class="divider-30"></div>
+											</div>
+											<div class="intro_layer bigger" data-animation="fadeInRight">
+												<h2>Automatic & <br>Manual <span class="color-main2">Gates</span></h2>
+												<div class="divider-30 divider-xl-50"></div>
+											</div>
+											<div class="intro_layer text-white" data-animation="fadeInRight">
+												<p>
+													Our fence installers deliver superior craftsmanship with integrity <br>you can count on for both residential and commercial projects.
+												</p>
+												<div class="divider-40 divider-xl-60"></div>
+											</div>
+											<div class="intro_layer button-layer" data-animation="fadeInUp">
+												<a href="./pricing.html" class="btn btn-maincolor btn-slider">Get Started</a>
+											</div>
+										</div> <!-- eof .intro_layers -->
+									</div> <!-- eof .col-* -->
+								</div><!-- eof .row -->
+							</div><!-- eof .container-fluid -->
+						</li>
+						
+					</ul>
+				</div> <!-- eof flexslider -->
+			</section>
+
+			<!-- Section About -->
+			<section class="ls s-pt-60 s-pb-90 s-pt-xl-90 s-pb-xl-120 c-gutter-60">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-5">
+							<div class="img-bulb">
+								<div class="img-bulb-wrap">
+									<img src="images/gallery/21.jpg" alt="img">
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-7">
+							<div class="divider-60 divider-lg-0"></div>
+							<p class="color-main2 line-left">
+								<span>About Us</span>
+							</p>
+							<h3 class="mt-0 mb-2 special-heading color-darkgrey">
+								<span>Veteran Owned <br>Business</span>
+							</h3>
+
+							<div class="divider-30 divider-xl-55"></div>
+							<p>
+								We install all styles and types of wood fences using cedar, redwood, and fir. You also have the choice of using treated wood posts, and boxed posts.
+							</p>
+							<p>We pride ourselves in offering Quality Service. We’re dependable and reliable. </p>
+							<div class="divider-50 divider-xl-70"></div>
+							<div class="columns-two">
+								<div class="media">
+									<div class="icon-styled fs-20 color2 text-white with-bulb mr-3">
+										<i class="ico-phone"></i>
+									</div>
+									<div class="media-body">
+										<h6 class="mb-2 fw-500 fs-16">
+											+1 531 287 02 31
+										</h6>
+									</div>
+								</div>
+								<div class="media">
+									<div class="icon-styled fs-20 color2 text-white with-bulb mr-3">
+										<i class="ico-mail"></i>
+									</div>
+									<div class="media-body">
+										<h6 class="mb-2 fw-500 fs-16">
+											infocenter@ufence.com
+										</h6>
+									</div>
+								</div>
+							</div>
+							<div class="divider-50 divider-xl-80"></div>
+							<a href="contact.html" class="btn btn-maincolor btn-medium">Free Estimate</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section About
+			<section id="about" class="ls section-about s-overlay mobile-overlay s-pt-90 s-pb-85 s-pt-xl-120 s-pb-xl-115 c-gutter-60">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7">
+							<p class="color-main2 line-left">
+								<span>About Us</span>
+							</p>
+							<h3 class="mt-0 mb-2 special-heading color-darkgrey">
+								<span>Veteran Owned <br>Business</span>
+							</h3>
+
+							<div class="divider-30 divider-xl-55"></div>
+							<p>
+								We install all styles and types of wood fences using cedar, redwood, and fir. You also have the choice of using treated wood posts, and boxed posts.
+							</p>
+							<p>We pride ourselves in offering Quality Service. We’re dependable and reliable. </p>
+							<div class="divider-50 divider-xl-70"></div>
+							<div class="columns-two">
+								<div class="media">
+									<div class="icon-styled fs-20 color2 text-white with-bulb mr-3">
+										<i class="ico-phone"></i>
+									</div>
+									<div class="media-body">
+										<h6 class="mb-2 fw-500 fs-16">
+											+1 531 287 02 31
+										</h6>
+									</div>
+								</div>
+								<div class="media">
+									<div class="icon-styled fs-20 color2 text-white with-bulb mr-3">
+										<i class="ico-mail"></i>
+									</div>
+									<div class="media-body">
+										<h6 class="mb-2 fw-500 fs-16">
+											infocenter@ufence.com
+										</h6>
+									</div>
+								</div>
+							</div>
+							<div class="divider-50 divider-xl-80"></div>
+							<a href="contact.html" class="btn btn-maincolor btn-medium">Free Estimate</a>
+						</div>
+					</div>
+				</div>
+			</section> -->
+
+			<!-- Section Services -->
+			<section id="services" class="ls section-service ms s-py-90 s-py-xl-120">
+				<div class="container-fluid">
+					<div class="row align-center">
+						<div class="col-xl-3 offset-xl-1 text-center text-xl-left">
+							<p class="color-main2 line-left">
+								<span>Our Services</span>
+							</p>
+							<h3 class="mt-0 mb-2 special-heading color-darkgrey">
+								<span>Best South Florida Gate Services</span>
+							</h3>
+
+							<div class="divider-30 divider-xl-55"></div>
+
+							<p>Our project foreman have an average of 25 years experience in the industry.</p>
+
+							<div class="divider-40 divider-xl-60"></div>
+
+							<div class="elem-with-pattern">
+								<a href="services.html" class="btn btn-maincolor with-pattern btn-medium">See More</a>
+							</div>
+							<div class="divider-60 divider-xl-0"></div>
+						</div>
+						<div class="col-xl-7 offset-xl-1">
+							<div class="row align-center">
+								<div class="col-xl-4 col-lg-4">
+									<div class="vertical-item service-layout-2 grid text-center box-shadow">
+										<div class="item-content">
+											<div class="icon-styled with-bulb color2 text-white fs-40 mb-5">
+												<i class="ico-gate-3"></i>
+											</div>
+											<h5 class="mt-0 mb-3 fs-20">
+												<a href="service-single.html">Installation</a>
+											</h5>
+											<p>
+												Our workmanship is of the highest quality we will complete
+											</p>
+										</div>
+									</div>
+									<div class="divider-50 divider-lg-0"></div>
+								</div>
+								<div class="col-xl-4 col-lg-4">
+									<div class="vertical-item service-layout-2 grid text-center box-shadow">
+										<div class="item-content">
+											<div class="icon-styled with-bulb color2 text-white fs-40 mb-5">
+												<i class="ico-fences-1"></i>
+											</div>
+											<h5 class="mt-0 mb-3 fs-20">
+												<a href="service-single.html">Manufacturing</a>
+											</h5>
+											<p>
+												We have a commitment to provide fences
+											</p>
+										</div>
+									</div>
+									<div class="divider-50"></div>
+									<div class="vertical-item service-layout-2 grid text-center box-shadow">
+										<div class="item-content">
+											<div class="icon-styled with-bulb color2 text-white fs-40 mb-5">
+												<i class="ico-fence-2"></i>
+											</div>
+											<h5 class="mt-0 mb-3 fs-20">
+												<a href="service-single.html">Repair</a>
+											</h5>
+											<p>
+												Fence Builders are dedicated to giving fence
+											</p>
+										</div>
+									</div>
+									<div class="divider-50 divider-lg-0"></div>
+								</div>
+								<div class="col-xl-4 col-lg-4">
+									<div class="vertical-item service-layout-2 grid text-center box-shadow">
+										<div class="item-content">
+											<div class="icon-styled with-bulb color2 text-white fs-40 mb-5">
+												<i class="ico-gate-3"></i>
+											</div>
+											<h5 class="mt-0 mb-3 fs-20">
+												<a href="service-single.html">Commercial</a>
+											</h5>
+											<p>
+												We have been providing the most advanced and innovative
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section Testimonial -->
+			<section id="testimonials" class="ls section-testimonial s-py-90 s-pt-xl-120 s-pb-xl-80 c-gutter-60">
+				<div class="container">
+					<div class="row align-center">
+						<div class="col-lg-6">
+							<div class="owl-carousel owl-team sync2" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1" data-nav="false" data-margin="0" data-loop="false" data-draggable="false">
+								<div class="img-wrap mb-40">
+									<img src="images/team/01_big.jpg" alt="img">
+								</div>
+								<div class="img-wrap mb-40">
+									<img src="images/team/02.jpg" alt="img">
+								</div>
+								<div class="img-wrap mb-40">
+									<img src="images/team/03.jpg" alt="img">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="divider-lg-0 divider-60"></div>
+							<p class="color-main2 line-left">
+								<span>Testimonials</span>
+							</p>
+							<h3 class="my-0 special-heading color-darkgrey">
+								Don’t Believe Us. <br>
+								Check Client
+							</h3>
+							<div class="divider-20"></div>
+							<div class="owl-carousel owl-quote sync1" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1" data-nav="false" data-margin="0" data-loop="false" data-dots="true">
+								<div class="quote-item quote-layout-1">
+									<blockquote>
+										<p>
+											Alan and his crew did an awesome job on our fence replacement. It was a big job; all 4 sides of our property. The finished product is the talk of the neighborhood.
+										</p>
+									</blockquote>
+									<h6 class="quote-title">Martha E. Savoie</h6>
+									<p class="quote-position">Happy Customer</p>
+								</div>
+								<div class="quote-item quote-layout-1">
+									<blockquote>
+										<p>
+											Alan and his crew did an awesome job on our fence replacement. It was a big job; all 4 sides of our property. The finished product is the talk of the neighborhood.
+										</p>
+									</blockquote>
+									<h6 class="quote-title">Robert G. Ackerman</h6>
+									<p class="quote-position">Happy Customer</p>
+								</div>
+								<div class="quote-item quote-layout-1">
+									<blockquote>
+										<p>
+											Alan and his crew did an awesome job on our fence replacement. It was a big job; all 4 sides of our property. The finished product is the talk of the neighborhood.
+										</p>
+									</blockquote>
+									<h6 class="quote-title">Deborah J. Davis</h6>
+									<p class="quote-position">Happy Customer</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section Gallery -->
+			<section id="gallery" class="ds ms s-py-90 s-py-xl-120">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 text-center">
+							<p class="color-main2 line-left">
+								<span>Gallery</span>
+							</p>
+							<h3 class="mt-0 mb-2 special-heading">
+								<span>Our Latest Projects</span>
+							</h3>
+							<div class="divider-40 divider-xl-60"></div>
+							<a href="gallery-image.html" class="btn btn-maincolor with-pattern btn-medium">See More</a>
+							<div class="divider-60 divider-xl-65"></div>
+							<div class="grid-container gap-10 gallery-layout-1">
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/07.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">DuraMax Scalloped </a>
+											</h5>
+											<p>The Fence Company is your family-owned and locally </p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/08.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">Block wall installation</a>
+											</h5>
+											<p>The Fence Company is your family-owned and locally </p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/09.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">DuraMax Scalloped </a>
+											</h5>
+											<p>The Fence Company is your family-owned and locally </p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/10.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">Manufacturing</a>
+											</h5>
+											<p>Ensure Minimal Waste & Reduce The Environmental</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/11.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">Costco Optical Lab</a>
+											</h5>
+											<p>It is rare to find a fencing company that personally</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/12.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">Manufacturing</a>
+											</h5>
+											<p>Ensure Minimal Waste & Reduce The Environmental</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section Counter -->
+			<section class="ds bs s-pt-90 s-pb-60 s-pb-lg-90 c-gutter-80 section-counter s-parallax s-overlay">
+				<div class="container">
+					<div class="row align-items-start">
+						<div class="col-xl-4 text-center text-lg-left">
+							<p class="color-main2 line-left">
+								<span>Counters</span>
+							</p>
+							<h3 class="mt-0 mb-2 special-heading">
+								<span>Success With Numbers</span>
+							</h3>
+							<div class="divider-50 divider-xl-0"></div>
+						</div>
+						<div class="col-md-6 col-lg-3 col-xl-2 right-border text-center">
+							<div class="counter_wrap d-inline-flex flex-column align-items-start">
+								<h3 class="counter-wrap color-main mb-0 fs-50">
+									<span class="counter counter-size" data-from="0" data-to="50" data-speed="1500">0</span>
+									<span>+</span>
+								</h3>
+								<p class="counter-text text-white">Customers</p>
+							</div>
+							<div class="divider-30 divider-lg-0"></div>
+						</div>
+						<div class="col-md-6 col-lg-3 col-xl-2 right-border text-center">
+							<div class="counter_wrap d-inline-flex flex-column align-items-start">
+								<h3 class="counter-wrap color-main mb-0 fs-50">
+									<span class="counter counter-size" data-from="0" data-to="30" data-speed="1500">0</span>
+									<span>+</span>
+								</h3>
+								<p class="counter-text text-white">Prizes</p>
+							</div>
+							<div class="divider-30 divider-lg-0"></div>
+						</div>
+						<div class="col-md-6 col-lg-3 col-xl-2 right-border text-center">
+							<div class="counter_wrap d-inline-flex flex-column align-items-start">
+								<h3 class="counter-wrap color-main mb-0 fs-50">
+									<span class="counter counter-size" data-from="0" data-to="40" data-speed="1500">0</span>
+									<span>+</span>
+								</h3>
+								<p class="counter-text text-white">Testimonials</p>
+							</div>
+							<div class="divider-30 divider-lg-0"></div>
+						</div>
+						<div class="col-md-6 col-lg-3 col-xl-2 text-center">
+							<div class="counter_wrap d-inline-flex flex-column align-items-start">
+								<h3 class="counter-wrap color-main mb-0 fs-50">
+									<span class="counter counter-size" data-from="0" data-to="90" data-speed="1500">0</span>
+									<span>+</span>
+								</h3>
+								<p class="counter-text text-white">Projects</p>
+							</div>
+							<div class="divider-30 divider-lg-0"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="overflow-visible top-bottom-100-xl s-py-90 s-py-xl-0">
+				<div class="container section-action">
+					<div class="row">
+						<div class="col-xl-8 offset-xl-4">
+							<div class="ds cs2 p-40 p-lg-70 border-radius-3">
+								<h4 class="special-heading">
+									<span>To Learn More About Our Services & Styles For Your</span>
+								</h4>
+								<a href="services.html" class="btn btn-maincolor btn-medium">Click Here</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="contacts" class="ls ms container-px-0">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xl-6">
+							<div class="page_map">
+
+								<div class="marker">
+									<div class="marker-address">sydney, australia, Liverpool street, 66</div>
+									<div class="marker-title">First Marker</div>
+									<div class="marker-description">
+
+										<ul class="list-unstyled">
+											<li>
+												<span class="icon-inline">
+													<span class="icon-styled color-main">
+														<i class="fa fa-map-marker"></i>
+													</span>
+
+													<span>
+														Sydney, Australia, Liverpool street, 66
+													</span>
+												</span>
+											</li>
+
+											<li>
+												<span class="icon-inline">
+													<span class="icon-styled color-main">
+														<i class="fa fa-phone"></i>
+													</span>
+
+													<span>
+														1 (800) 123-45-67
+													</span>
+												</span>
+											</li>
+											<li>
+												<span class="icon-inline">
+													<span class="icon-styled color-main">
+														<i class="fa fa-envelope"></i>
+													</span>
+
+													<span>
+														mail@example.com
+													</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+
+									<img class="marker-icon" src="images/map_marker_icon.png" alt="img">
+								</div>
+								<!-- .marker -->
+
+								<div class="marker">
+									<div class="marker-address">sydney, australia, Glenmore Road, 182</div>
+									<div class="marker-title">Second Marker</div>
+									<div class="marker-description">
+
+										<ul class="list-unstyled">
+											<li>
+												<span class="icon-inline">
+													<span class="icon-styled color-main">
+														<i class="fa fa-map-marker"></i>
+													</span>
+
+													<span>
+														Sydney, Australia, Glenmore Road, 182
+													</span>
+												</span>
+											</li>
+
+											<li>
+												<span class="icon-inline">
+													<span class="icon-styled color-main">
+														<i class="fa fa-phone"></i>
+													</span>
+
+													<span>
+														1 (800) 123-45-67
+													</span>
+												</span>
+											</li>
+											<li>
+												<span class="icon-inline">
+													<span class="icon-styled color-main">
+														<i class="fa fa-envelope"></i>
+													</span>
+
+													<span>
+														mail@example.com
+													</span>
+												</span>
+											</li>
+										</ul>
+
+									</div>
+
+									<img class="marker-icon" src="images/map_marker_icon2.png" alt="img">
+								</div>
+								<!-- .marker -->
+
+								<div class="marker">
+									<div class="marker-address">sydney, australia, oxford street, 88</div>
+									<div class="marker-title">Third Marker</div>
+									<div class="marker-description">
+										<p><strong>Sydney, Australia, Oxford Street, 88</strong>.<br>
+											Lorem ipsum dolor sit amet,
+											consectetur adipisicing elit. Aliquid cumque,
+											deserunt dolor.
+										</p>
+									</div>
+
+									<img class="marker-icon" src="images/map_marker_icon3.png" alt="img">
+								</div>
+								<!-- .marker -->
+
+								<div class="marker">
+									<div class="marker-address">sydney, australia, Liverpool street, 2</div>
+									<div class="marker-title">Fourth Marker</div>
+									<div class="marker-description">
+										<p><strong>Sydney, Australia, Liverpool Street, 2</strong>.<br>
+											Lorem ipsum dolor sit amet,
+											consectetur adipisicing elit. Aliquid cumque,
+											deserunt dolor.
+										</p>
+									</div>
+
+									<img class="marker-icon" src="images/map_marker_icon4.png" alt="img">
+								</div>
+								<!-- .marker -->
+
+							</div>
+						</div>
+						<div class="col-xl-6 section-special-3">
+							<div class="z-index-2  ls ms">
+								<div>
+									<div class="divider-xl-100"></div>
+									<p class="color-main2 line-left">
+										<span>Contacts</span>
+									</p>
+									<h3 class="mt-0 mb-2 special-heading color-darkgrey">
+										<span>Send Us A Message</span>
+									</h3>
+									<div class="divider-40 divider-xl-60"></div>
+									<form class="contact-form c-mb-10 c-gutter-10" method="post" action="/">
+
+										<div class="row">
+
+											<div class="col-lg-6">
+												<div class="form-group has-placeholder">
+													<label for="email">Email address<span class="required">*</span></label>
+													<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Your Email">
+												</div>
+											</div>
+
+											<div class="col-lg-6">
+												<div class="form-group has-placeholder">
+													<label for="name">Full Name <span class="required">*</span></label>
+													<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Your Name">
+												</div>
+											</div>
+
+											<div class="col-12">
+												<div class="form-group has-placeholder">
+													<label for="message">Message</label>
+													<textarea aria-required="true" rows="5" cols="45" name="message" id="message" class="form-control" placeholder="Your Message"></textarea>
+												</div>
+											</div>
+										</div>
+
+										<div class="row mt-35 mt-xl-60">
+
+											<div class="col-sm-12">
+
+												<div class="form-group has-placeholder">
+													<button type="submit" id="contact_form_submit" name="contact_submit" class="btn btn-maincolor btn-short btn-medium">Send
+													</button>
+												</div>
+											</div>
+
+										</div>
+
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="page_footer ds ms s-pt-90 s-pb-85 s-pt-xl-120 s-pb-xl-110 c-gutter-30">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-3 col-lg-4 text-center text-lg-left animate" data-animation="fadeInUp">
+							<div class="widget widget_text">
+								<img src="images/logo.png" alt="logo">
+								<p>
+									Fence Builders Dallas is located in the gorgeous heart of Dallas, only 20 minutes from Dallas
+								</p>
+								<p class="social-icons">
+									<a href="https://www.facebook.com/" class="fa border-icon rounded-icon fa-facebook" title="facebook"></a>
+									<a href="https://twitter.com/" class="fa border-icon rounded-icon fa-twitter" title="twitter"></a>
+									<a href="https://www.instagram.com/" class="fa border-icon rounded-icon fa-instagram" title="instagram"></a>
+									<a href="https://www.youtube.com/" class="fa border-icon rounded-icon fa-youtube-play" title="youtube"></a>
+								</p>
+							</div>
+							<div class="divider-60 divider-lg-0"></div>
+						</div>
+
+						<!-- <div class="offset-xl-1 col-lg-4 text-center text-lg-left animate" data-animation="fadeInUp">
+							<div class="widget widget_gallery">
+								<h3>Photo Gallery</h3>
+								<div class="row c-gutter-10 c-mb-10">
+									<div class="col-3">
+										<div class="vertical-item">
+											<div class="item-media border-radius-3">
+												<img src="images/square/07.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="gallery-image.html"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="vertical-item">
+											<div class="item-media border-radius-3">
+												<img src="images/square/08.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="gallery-image.html"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="vertical-item">
+											<div class="item-media border-radius-3">
+												<img src="images/square/09.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="gallery-image.html"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="vertical-item">
+											<div class="item-media border-radius-3">
+												<img src="images/square/10.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="gallery-image.html"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="vertical-item">
+											<div class="item-media border-radius-3">
+												<img src="images/square/04.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="gallery-image.html"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="vertical-item">
+											<div class="item-media border-radius-3">
+												<img src="images/square/11.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="gallery-image.html"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="vertical-item">
+											<div class="item-media border-radius-3">
+												<img src="images/square/03.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="gallery-image.html"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="vertical-item">
+											<div class="item-media border-radius-3">
+												<img src="images/square/12.jpg" alt="img">
+												<div class="media-links">
+													<a class="abs-link" title="" href="gallery-image.html"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="divider-60 divider-lg-0"></div>
+						</div> -->
+
+						<!-- <div class="offset-xl-1 col-xl-3 col-lg-4 text-center text-lg-left animate" data-animation="fadeInUp">
+							<div class="widget widget_mailchimp">
+
+								<h3 class="widget-title">Newsletter</h3>
+
+								<form class="signup" action="/">
+									<label for="mailchimp_email">
+										<span class="screen-reader-text">Subscribe:</span>
+									</label>
+
+									<input id="mailchimp_email" name="email" type="email" class="form-control mailchimp_email" placeholder="Email">
+
+									<button type="submit" class="search-submit">
+										<span class="screen-reader-text">Subscribe</span>
+									</button>
+									<div class="response"></div>
+								</form>
+
+							</div>
+							<div class="widget widget_icons_list">
+								<h3>Contact Us:</h3>
+								<ul class="list-unstyled">
+									<li><i class="fa fa-phone color-main2 mr-2"></i> +1 531 287 02 30</li>
+									<li><i class="fa fa-envelope color-main2 mr-2"></i> infocenter@ufence.com</li>
+								</ul>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</footer>
+
+			<section class="page_copyright ls s-py-15">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-md-12 text-center">
+							<p>&copy; Copyright <span class="copyright_year">2024</span> All Rights Reserved</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		</div><!-- eof #box_wrapper -->
+	</div><!-- eof #canvas -->
+
+
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+
+
+	<!-- Google Map Script -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4&callback=initGoogleMap"></script>
+
+</body>
+
+</html>

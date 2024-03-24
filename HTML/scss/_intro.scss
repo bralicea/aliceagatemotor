@@ -1,0 +1,342 @@
+/* 
+** Intro Section Styles
+*/
+
+.page_slider {
+  position: relative;
+  overflow: hidden;
+  //fix slider bug on small screens
+  clear: both;
+  & > img {
+    width: 100%;
+  }
+
+  h2 {
+    margin: 0;
+    line-height: 1;
+  }
+  h3 {
+    margin: 0;
+    line-height: 1;
+  }
+  h4 {
+    margin: 0;
+  }
+  h5 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+
+  .bigger{
+    @media (min-width: 1200px) {
+      h2 {
+        font-size: 80px;
+      }
+      h3 {
+        font-size: 70px;
+      }
+      h4 {
+        font-size: 60px;
+      }
+      h5 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &.no-dots{
+    .flex-control-nav{
+      display: none;
+    }
+  }
+
+  &.no-nav{
+    .flex-direction-nav{
+      display: none;
+    }
+  }
+
+  &.with-abs-header{
+    .intro_layers{
+      margin-top: 100px;
+      @media (max-width: 1199px) {
+        margin-top: 80px;
+      }
+    }
+  }
+
+  .flex-direction-nav{
+    height: 0;
+    @media (max-width: 575px){
+      display: none;
+    }
+  }
+
+  .flex-direction-nav .flex-prev {
+    left: 5%;
+    //opacity: 1;
+    &::before{
+      content: "\e920";
+      font-family: 'icomoon';
+      font-size: 40px;
+      left: 0;
+    }
+  }
+  .flex-direction-nav .flex-next {
+    right: 5%;
+    //opacity: 1;
+    &::before{
+      content: "\e921";
+      font-family: 'icomoon';
+      font-size: 40px;
+      left: 0;
+    }
+  }
+
+  .flexslider {
+    //making every slide same height (stretch) for nice background on every slide
+    .slides {
+      display: flex;
+      &.m-h-900{
+        li{
+          @media (min-width: 1200px) {
+            min-height: 900px;
+          }
+        }
+      }
+      li{
+        min-height: 800px;
+        img{
+          display: none;
+        }
+        @media (max-width: 1199px) {
+          min-height: 600px;
+        }
+      }
+    }
+
+    //ie bugfix with page_slider overlap
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .intro_layer img {
+      width: auto;
+      display: inline-block;
+    }
+
+    //uncomment if you need a shadow on your slider
+    &.slider-shadow {
+      padding-bottom: 50px;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        background: transparent;
+        z-index: 1;
+        bottom: 65px;
+        left: 10px;
+        width: 50%;
+        height: 20%;
+        max-width: 400px;
+        box-shadow: 0 25px 20px rgba(0, 0, 0, 0.3);
+        transform: rotate(-3deg);
+      }
+      &:after {
+        right: 10px;
+        left: auto;
+        transform: rotate(3deg);
+      }
+    }
+  }
+
+  .intro_layers_wrapper {
+    display: flex;
+  }
+
+  .intro_after_featured_word {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    @media(max-width: 400px) {
+      display: none;
+    }
+  }
+
+  .row{
+    height: 100%;
+  }
+
+  .intro_layers {
+    padding: 20px 0;
+    position: relative;
+
+  }
+  //dots - horizontal
+  .flex-control-nav {
+    position: absolute;
+    width: auto;
+    top: calc(50% + 40px);
+    transform: translateY(-50%);
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none outside none;
+    counter-reset: li!important;
+
+    li {
+      display: block;
+      padding: 0;
+      list-style: none;
+      line-height: 1;
+      & + li {
+        margin-top: 30px;
+      }
+      a {
+        width: auto;
+        height: auto;
+        border:none;
+        opacity: 1;
+        &::before{
+          content: ".0" counter(li);
+          counter-increment: li;
+          left: 2px;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          font-size: 16px;
+          color: $lightColor;
+          transition: all .3s ease-in-out;
+        }
+        &:hover,
+        &.flex-active {
+          background-color: transparent;
+          &::before{
+            color: $colorMain;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    @media (max-width: 1199px) {
+      right: 50px;
+    }
+    @media (max-width: 768px) {
+      right: auto;
+      top: auto;
+      left: 50%;
+      bottom: 30px;
+      transform: translateX(-50%);
+      flex-direction:row;
+
+      li +li {
+        margin-top: 0;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  //lg and bigger layout
+  .cs,
+  .ds {
+    background-color: transparent;
+  }
+
+  //description alignment
+  //for intro with testimonials,
+  //for static intro
+  //.flexslider prefix removed
+  .container-fluid,
+  .container,
+  img + .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  [class*="col-"] {
+    position: static;
+    min-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+  }
+
+  // center alignment for slide description
+  .intro_layers_wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    left: 15px;
+    height: 100%;
+    z-index: 5;
+
+    @media (min-width: 600px) {
+      .boxed & {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
+  }
+
+  .intro_text_top .intro_layers {
+    justify-content: flex-start;
+  }
+  .intro_text_bottom .intro_layers {
+    justify-content: flex-end;
+  }
+
+
+  .d-inline-block{
+    width: 100%;
+  }
+
+  .slide-video{
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    @media (max-width: 1259px) {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .button-layer{
+    display: inline;
+    a,
+    .btn{
+      margin-right: 15px;
+    }
+  }
+
+  .photoswipe-link-button-spec{
+    &.absolute-btn{
+      @media (min-width: 1200px) {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+}
+
+/*
+** Intro Section Styles End
+*/

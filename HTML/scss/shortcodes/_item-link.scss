@@ -1,0 +1,19 @@
+/*
+** Item link
+*/
+
+.item-link{
+  .title{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    text-align: center;
+    background-color: $lightColor;
+    padding: 15px;
+    h6{
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
+}

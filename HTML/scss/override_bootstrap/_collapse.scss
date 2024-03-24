@@ -1,0 +1,124 @@
+/* bootstrap collapse*/
+
+aside{
+  [role="tablist"] .card .card-body{
+    padding-left: 30px;
+    padding-right: 30px;
+    &::before{
+      display: none;
+    }
+  }
+}
+
+//unstyled
+[data-toggle="collapse"] {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  &:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -7px;
+    font-size: 10px;
+    font-family: 'FontAwesome';
+    content: "\f078";
+  }
+  &.collapsed {
+    &:after {
+      content: "\f054";
+    }
+  }
+}
+
+//cards as tabs
+[role="tablist"] {
+  .card {
+    border: none;
+    background: none;
+    margin-bottom: -1px;
+    box-shadow: $boxShadow;
+    border-radius: 3px;
+
+    & + .card{
+      margin-top: 10px;
+    }
+    .card-header {
+      padding: 0;
+      background: none;
+      border: none;
+      a {
+        font-family: 'Montserrat';
+        font-size: 20px;
+        display: block;
+        font-weight: bold;
+        position: relative;
+        padding: 23px 35px;
+        line-height: 1.7;
+        letter-spacing: -0.3px;
+        transition: all .3s ease-in-out;
+        &:after {
+          display: none;
+        }
+        .with-bulb{
+          &::before,
+          &::after{
+            width: 220%;
+            height: 250%;
+          }
+        }
+        &:hover {
+          opacity: 1;
+          color: $colorMain2;
+          &:before,
+          &:after {
+          }
+        }
+        &.collapsed {
+          background-color: transparent;
+          color: $darkgreyColor;
+          &:hover{
+            color: $colorMain2;
+          }
+        }
+      }
+    }
+    .collapse{
+      .card-body{
+        background-color: transparent;
+        transition: all .3s ease-in-out;
+      }
+      &.show{
+        .card-body{
+
+        }
+      }
+    }
+    .collapsing{
+      .card-body{
+
+      }
+    }
+    .card-body {
+      padding: 0 85px 20px;
+      position: relative;
+      line-height: 24px;
+      margin-top: -5px;
+      @media (max-width: 767px) {
+        padding: 0 30px 30px;
+        &::before{
+          display: none;
+        }
+      }
+
+    }
+  }
+  [data-toggle="collapse"]{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .media img {
+    max-width: 80px;
+  }
+}

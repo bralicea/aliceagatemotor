@@ -1,0 +1,171 @@
+/*
+** Buttons
+ */
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: 0 0 3px 0 rgba(100, 100, 100, .75);
+}
+
+.btn-secondary {
+  border-color: $borderColor;
+  color: $darkgreyColor;
+}
+
+.btn-link{
+  color: $darkgreyColor;
+  text-decoration: underline;
+  &:hover{
+    color: $colorMain2;
+  }
+}
+
+.btn-circle{
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: $boxShadow;
+  background-color: $lightColor;
+  &:hover{
+    background-color: $colorMain2;
+    color: $lightColor!important;
+  }
+}
+
+.service-layout-3,
+.service-layout-1{
+  &.ls,
+  &.ds{
+    .btn-booking{
+      background-color: $greyColor;
+    }
+    &.ms{
+      .btn-booking{
+        background-color: $lightColor;
+      }
+    }
+  }
+
+}
+
+.btn-booking{
+  color: $darkColor;
+  background-color: $greyColor;
+  padding: 9px 50px 8px 25px;
+  border-radius: 30px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  width: 100%;
+  &::before{
+    content: '\f04b';
+    font-family: "FontAwesome", sans-serif;
+    font-size: 12px;
+    color: $lightColor;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorMain;
+    z-index: 1;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-color: $colorMain;
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border-radius: 35px;
+    transition: all .3s ease-in-out;
+  }
+  &:hover{
+    color: $lightColor!important;
+    &::after{
+      width: 100%;
+    }
+  }
+}
+
+/*color background buttons*/
+.btn-maincolor,
+.btn-maincolor2,
+.btn-maincolor3,
+.btn-maincolor4{
+  color: $lightColor;
+  &:hover{
+    color: $lightColor;
+  }
+}
+
+.btn-maincolor,
+.btn-maincolor2,
+.btn-maincolor3,
+.btn-maincolor4,
+.btn-darkgrey,
+.btn-grey{
+  border: 2px solid transparent;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+  overflow: hidden;
+  &.btn-slider{
+
+  }
+}
+
+.btn-maincolor {
+  @include btnMain($colorMain, $lightColor);
+}
+.btn-maincolor2 {
+  @include btnMain($colorMain2, $lightColor);
+}
+.btn-maincolor3 {
+  @include btnMain($colorMain3, $lightColor);
+}
+.btn-maincolor4 {
+  @include btnMain($colorMain4, $lightColor);
+}
+.btn-darkgrey {
+  @include btnMain($darkgreyColor, $lightColor, $lightColor);
+}
+.btn-grey {
+  @include btnMain($greyColor, $darkgreyColor, $lightColor);
+}
+
+/*color outline buttons*/
+
+.btn-outline-maincolor {
+  @include btnOutlineMain($colorMain, $darkgreyColor, $darkgreyColor);
+}
+.btn-outline-maincolor2 {
+  @include btnOutlineMain($colorMain2, $darkgreyColor, $darkgreyColor);
+}
+.btn-outline-maincolor3 {
+  @include btnOutlineMain($colorMain3, $darkgreyColor, $darkgreyColor);
+}
+.btn-outline-maincolor4 {
+  @include btnOutlineMain($colorMain4, $darkgreyColor, $darkgreyColor);
+}
+.btn-outline-grey {
+  @include btnOutlineMain($greyColor, $darkgreyColor, $darkgreyColor);
+}
+.btn-outline-darkgrey {
+  @include btnOutlineMain($darkgreyColor, $darkgreyColor, $darkgreyColor);
+}
