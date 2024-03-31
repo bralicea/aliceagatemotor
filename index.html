@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<title>Alicea Gate Motor</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="preloader">
+		<div class="preloader_image pulse"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form" action="/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="btn">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls p-normal">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div><!-- eof .modal -->
+
+	<!-- <div class="modal fade popupLogin" id="popupLogin" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content ds bs overflow-visible border-radius-3 box-shadow">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="color-main mb-3">Log in</h4>
+								<form class="form-registration c-mb-20 c-gutter-20" action="/">
+									<div class="row mb-4">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
+											</div>
+										</div>
+									</div>
+									<a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr" data-toggle="modal" href="#">Not a member? Register!</a>
+									<button type="submit" class="btn btn-maincolor mt-30 d-block">Sign In</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- <div class="modal fade popupRegistr" id="popupRegistr" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content ds bs overflow-visible border-radius-3 box-shadow">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="color-main mb-4">Registration</h4>
+								<form class="form-registration c-mb-20 c-gutter-20" method="post" action="/">
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="email" name="email" class="form-control" placeholder="email" required aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="password" name="confirmPassword" class="form-control" placeholder="password" required aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="checkbox" id="agreed" name="agreed" value="agreed" required aria-required="true"><label for="agreed">I agree to the rules</label>
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-maincolor mt-30 d-block">Registration</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+
+			<div class="header_absolute ds bs cover-background ">
+				<!-- header with three Bootstrap columns - left for logo, center for navigation and right for includes-->
+				<header class="page_header justify-nav-start ds bs s-overlay s-borderbottom">
+					<div class="container-fluid">
+						<div class="row align-items-center">
+							<div class="col-xl-2 col-sm-4 col-11">
+								<!-- <a href="./" class="logo">
+									<img class="logo-light" src="images/logo.png" alt="img">
+									<img class="logo-dark" src="images/logo-dark.png" alt="img">
+								</a> -->
+							</div>
+							<div class="col-xl-10 col-1">
+								<div class="nav-wrap">
+									<!-- main nav start -->
+									<nav class="top-nav">
+										<ul class="nav sf-menu">
+											<li class="active">
+												<a href="#about">About</a>
+											</li>
+
+											<li>
+												<a href="#services">Services</a>
+											</li>
+
+											<li>
+												<a href="#gallery">Gallery</a>
+											</li>
+										</ul>
+
+
+									</nav>
+									<!-- eof main nav -->
+									<span class="justify-content-end ml-2 d-none d-xl-flex align-center">
+										<i class="fa fa-phone fs-20 mr-2 color-main2"></i> <a class="fs-20 color-font">(305) 987-7548</a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- header toggler -->
+					<span class="toggle_menu"><span></span></span>
+				</header>
+
+			</div>
+
+			<section class="page_slider with-abs-header no-dots">
+				<div class="flexslider">
+					<ul class="slides m-h-900">
+						<li class="ds bs s-overlay cover-image text-center text-lg-left">
+							<img src="images/automatic_gate_50.webp" alt="img">
+							<div class="container">
+								<div class="row align-center">
+									<div class="col-12">
+										<div class="intro_layers">
+											<div class="intro_layer bigger" data-animation="fadeInRight">
+												<h2>Gate Operator <br><span class="color-main2">Services</span></h2>
+												<div class="divider-30 divider-xl-50"></div>
+											</div>
+											<div class="intro_layer text-white" data-animation="fadeInRight">
+												<p>
+													Our experienced team ensures swift and professional installation of gate operators <br>and entry telephone systems for residential and commercial properties.
+												</p>
+												<div class="divider-40 divider-xl-60"></div>
+											</div>
+											<div class="intro_layer button-layer" data-animation="fadeInUp">
+												<a href="./pricing.html" class="btn btn-maincolor btn-slider">Get Started</a>
+											</div>
+										</div> <!-- eof .intro_layers -->
+									</div> <!-- eof .col-* -->
+								</div><!-- eof .row -->
+							</div><!-- eof .container-fluid -->
+						</li>
+						
+					</ul>
+				</div> <!-- eof flexslider -->
+			</section>
+
+			<!-- Section About -->
+			<section id="about" class="ls s-pt-60 s-pb-90 s-pt-xl-90 s-pb-xl-120 c-gutter-60">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-5">
+							<div class="img-bulb">
+								<div class="img-bulb-wrap">
+									<img src="images/remote_control.jpeg" alt="img">
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-7">
+							<div class="divider-60 divider-lg-0"></div>
+							<p class="color-main2 line-left">
+								<span>About Us</span>
+							</p>
+							<!-- <h3 class="mt-0 mb-2 special-heading color-darkgrey">
+								<span>Veteran Owned <br>Business</span>
+							</h3> -->
+
+							<div class="divider-30 divider-xl-55"></div>
+							<p>
+								We specialize in bringing automation to your doorstep. 
+								With over 15 years of experience in the industry, our mission is to enhance the security and convenience of your properties through the seamless integration of automated gate operators. 
+								We take pride in being a leading provider of gate automation solutions for residential and commercial clients across South Florida.
+							</p>
+							<p>
+								We service a wide range of automatic gate openers, including sliding, swing, barrier gates, and more, tailored to meet the specific needs and preferences of our clients.
+							</p>
+							<div class="divider-50 divider-xl-70"></div>
+							<div class="columns-two">
+								<div class="media">
+									<div class="icon-styled fs-20 color2 text-white with-bulb mr-3">
+										<i class="ico-phone"></i>
+									</div>
+									<div class="media-body">
+										<h6 class="mb-2 fw-500 fs-16">
+											(305) 987-7548
+										</h6>
+									</div>
+								</div>
+								<div class="media">
+									<div class="icon-styled fs-20 color2 text-white with-bulb mr-3">
+										<i class="ico-mail"></i>
+									</div>
+									<div class="media-body">
+										<h6 class="mb-2 fw-500 fs-16">
+											infocenter@ufence.com
+										</h6>
+									</div>
+								</div>
+							</div>
+							<div class="divider-50 divider-xl-80"></div>
+							<!-- <a href="contact.html" class="btn btn-maincolor btn-medium">Free Estimate</a> -->
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="ls ms section-service s-pt-90 s-pb-40 s-pt-xl-120 s-pb-xl-70 c-gutter-30">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<p class="text-center color-main2 line-left">
+								<span>Our Services</span>
+							</p>
+							<h3 class="text-center mt-0 mb-2 special-heading color-darkgrey">
+								<!-- <span>Best South Florida <br>Gate Operator Services</span> -->
+							</h3>
+							<div class="divider-55 divider-xl-65"></div>
+						</div>
+						<div class="col-12">
+							<div class="row c-mb-50">
+								<div class="col-lg-6 col-xl-4">
+									<div class="vertical-item service-layout-2 text-center box-shadow">
+										<div class="item-content">
+											<div class="icon-styled with-bulb color2 text-white fs-40 mb-5">
+												<i class="ico-gate-3"></i>
+											</div>
+											<h5 class="mt-0 mb-3 fs-20">
+												<a href="service-single.html">Installation</a>
+											</h5>
+											<p>
+												Residential and commercial
+											</p>
+										</div>
+									</div>
+								</div><!-- .col-* -->
+								<div class="col-lg-6 col-xl-4">
+									<div class="vertical-item service-layout-2 text-center box-shadow">
+										<div class="item-content">
+											<div class="icon-styled with-bulb color2 text-white fs-40 mb-5">
+												<i class="ico-gate-1"></i>
+											</div>
+											<h5 class="mt-0 mb-3 fs-20">
+												<a href="service-single.html">Integration</a>
+											</h5>
+											<p>
+												Access control systems
+											</p>
+										</div>
+									</div>
+								</div><!-- .col-* -->
+								<div class="col-lg-6 col-xl-4">
+									<div class="vertical-item service-layout-2 text-center box-shadow">
+										<div class="item-content">
+											<div class="icon-styled with-bulb color2 text-white fs-40 mb-5">
+												<i class="ico-fence-1"></i>
+											</div>
+											<h5 class="mt-0 mb-3 fs-20">
+												<a href="service-single.html">Repair</a>
+											</h5>
+											<p>
+												Ongoing maintenance and repair
+											</p>
+										</div>
+									</div>
+								</div><!-- .col-* -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section Gallery -->
+			<section id="gallery" class="ds ms s-py-90 s-py-xl-120">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 text-center">
+							<p class="color-main2 line-left">
+								<span>Gallery</span>
+							</p>
+							<div class="divider-40 divider-xl-60"></div>
+							<!-- <a href="gallery-image.html" class="btn btn-maincolor with-pattern btn-medium">See More</a> -->
+							<div class="divider-60 divider-xl-65"></div>
+							<div class="grid-container gap-10 gallery-layout-1">
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/07.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">DuraMax Scalloped </a>
+											</h5>
+											<p>The Fence Company is your family-owned and locally </p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/08.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">Block wall installation</a>
+											</h5>
+											<p>The Fence Company is your family-owned and locally </p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/09.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">DuraMax Scalloped </a>
+											</h5>
+											<p>The Fence Company is your family-owned and locally </p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/10.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">Manufacturing</a>
+											</h5>
+											<p>Ensure Minimal Waste & Reduce The Environmental</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/11.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">Costco Optical Lab</a>
+											</h5>
+											<p>It is rare to find a fencing company that personally</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid-box">
+									<div class="vertical-item item-gallery content-absolute text-center ds">
+										<div class="item-media">
+											<img src="images/gallery/12.jpg" alt="img">
+											<div class="media-links">
+												<div class="links-wrap">
+													<a class="link-anchor" title="" href="gallery-single.html"></a>
+												</div>
+											</div>
+										</div>
+										<div class="item-content">
+											<h5>
+												<a href="gallery-single.html">Manufacturing</a>
+											</h5>
+											<p>Ensure Minimal Waste & Reduce The Environmental</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section Counter -->
+			<section class="ds bs s-pt-90 s-pb-60 s-pb-lg-90 c-gutter-80 section-counter s-parallax s-overlay">
+				<div class="container">
+					<div class="row align-items-start">
+					<!-- 	<div class="col-xl-4 text-center text-lg-left">
+							<p class="color-main2 line-left">
+								<span>Counters</span>
+							</p>
+							<h3 class="mt-0 mb-2 special-heading">
+								<span>Success With Numbers</span>
+							</h3>
+							<div class="divider-50 divider-xl-0"></div>
+						</div>
+						<div class="col-md-6 col-lg-3 col-xl-2 right-border text-center">
+							<div class="counter_wrap d-inline-flex flex-column align-items-start">
+								<h3 class="counter-wrap color-main mb-0 fs-50">
+									<span class="counter counter-size" data-from="0" data-to="50" data-speed="1500">0</span>
+									<span>+</span>
+								</h3>
+								<p class="counter-text text-white">Customers</p>
+							</div>
+							<div class="divider-30 divider-lg-0"></div>
+						</div>
+						<div class="col-md-6 col-lg-3 col-xl-2 right-border text-center">
+							<div class="counter_wrap d-inline-flex flex-column align-items-start">
+								<h3 class="counter-wrap color-main mb-0 fs-50">
+									<span class="counter counter-size" data-from="0" data-to="30" data-speed="1500">0</span>
+									<span>+</span>
+								</h3>
+								<p class="counter-text text-white">Prizes</p>
+							</div>
+							<div class="divider-30 divider-lg-0"></div>
+						</div>
+						<div class="col-md-6 col-lg-3 col-xl-2 right-border text-center">
+							<div class="counter_wrap d-inline-flex flex-column align-items-start">
+								<h3 class="counter-wrap color-main mb-0 fs-50">
+									<span class="counter counter-size" data-from="0" data-to="40" data-speed="1500">0</span>
+									<span>+</span>
+								</h3>
+								<p class="counter-text text-white">Testimonials</p>
+							</div>
+							<div class="divider-30 divider-lg-0"></div>
+						</div>
+						<div class="col-md-6 col-lg-3 col-xl-2 text-center">
+							<div class="counter_wrap d-inline-flex flex-column align-items-start">
+								<h3 class="counter-wrap color-main mb-0 fs-50">
+									<span class="counter counter-size" data-from="0" data-to="90" data-speed="1500">0</span>
+									<span>+</span>
+								</h3>
+								<p class="counter-text text-white">Projects</p>
+							</div>
+							<div class="divider-30 divider-lg-0"></div>
+						</div>
+					</div> -->
+				</div>
+			</section>
+
+			<!-- Section Testimonial -->
+			<section id="meet" class="ls section-testimonial s-py-90 s-pt-xl-120 s-pb-xl-80 c-gutter-60">
+				<div class="container">
+					<div class="row align-center">
+						<div class="col-lg-6">
+							<div class="owl-carousel owl-team sync2" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1" data-nav="false" data-margin="0" data-loop="false" data-draggable="false">
+								<div class="img-wrap mb-40">
+									<img src="images/team/01_big.jpg" alt="img">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="divider-lg-0 divider-60"></div>
+							<p class="color-main2 line-left">
+								<span>Meet</span>
+							</p>
+							<!-- <h3 class="my-0 special-heading color-darkgrey">
+								Don’t Believe Us. <br>
+								Check Client
+							</h3> -->
+							<div class="divider-20"></div>
+							<div class="owl-carousel owl-quote sync1" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1" data-nav="false" data-margin="0" data-loop="false" data-dots="true">
+								<div class="quote-item quote-layout-1">
+									<blockquote>
+									</blockquote>
+									<h6 class="quote-title">Adrian Alicea</h6>
+									<p class="quote-position">Founder</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page_copyright ls s-py-15">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-md-12 text-center">
+							<p>&copy; Copyright <span class="copyright_year">2024.</span> All Rights Reserved</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		</div><!-- eof #box_wrapper -->
+	</div><!-- eof #canvas -->
+
+
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+
+
+	<!-- Google Map Script -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4&callback=initGoogleMap"></script>
+
+</body>
+
+</html>
